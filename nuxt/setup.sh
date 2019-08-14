@@ -16,11 +16,11 @@ printf '\n\Assets \e[1;34mcreated!\e[0m'
 mkdir components 
 mkdir components/layout
 
-curl -o components/README.md -l ${URL}/components/README.md
 curl -o components/intro.vue -l ${URL}/components/intro.vue
 curl -o components/layout/header.vue -l ${URL}/components/layout/header.vue
 curl -o components/layout/footer.vue -l ${URL}/components/layout/footer.vue
 curl -o components/layout/navigation.vue -l ${URL}/components/layout/navigation.vue
+curl -o components/README.md -l ${URL}/components/README.md
 
 printf '\n\Scripts \e[1;34mcreated!\e[0m' 
 
@@ -32,14 +32,15 @@ curl -o config/dev.sh -l ${URL}/config/dev.sh
 curl -o config/local.sh -l ${URL}/config/local.sh
 curl -o config/production.sh -l ${URL}/config/production.sh
 curl -o config/staging.sh -l ${URL}/config/staging.sh
+curl -o config/README.md -l ${URL}/config/README.md
 
 printf '\n\Config \e[1;34mcreated!\e[0m' 
 
 # Layouts
 mkdir layouts 
 
-curl -o layouts/README.md -l ${URL}/layouts/README.md
 curl -o layouts/index.vue -l ${URL}/layouts/index.vue
+curl -o layouts/README.md -l ${URL}/layouts/README.md
 
 printf '\n\Layouts \e[1;34mcreated!\e[0m' 
 
@@ -54,8 +55,8 @@ printf '\n\tMiddleware \e[1;34mcreated!\e[0m'
 # Pages
 mkdir pages 
 
-curl -o pages/README.md -l ${URL}/pages/README.md
 curl -o pages/index.vue -l ${URL}/pages/index.vue
+curl -o pages/README.md -l ${URL}/pages/README.md
 
 printf '\n\Pages \e[1;34mcreated!\e[0m' 
 
@@ -66,6 +67,7 @@ curl -o scripts/dev.sh -l ${URL}/scripts/dev.sh
 curl -o scripts/local.sh -l ${URL}/scripts/local.sh
 curl -o scripts/production.sh -l ${URL}/scripts/production.sh
 curl -o scripts/staging.sh -l ${URL}/scripts/staging.sh
+curl -o scripts/README.md -l ${URL}/scripts/README.md
 
 printf '\n\Scripts \e[1;34mcreated!\e[0m' 
 
@@ -80,6 +82,14 @@ curl -o static/icon.png -l ${URL}/static/icon.png
 curl -o static/images/README.md -l ${URL}/static/images/README.md
 
 printf '\n\Static \e[1;34mcreated!\e[0m' 
+
+
+# Static
+mkdir plugins 
+
+curl -o plugins/README.md -l ${URL}/plugins/README.md
+
+printf '\n\Plugins \e[1;34mcreated!\e[0m' 
 
 
 # Static
@@ -100,3 +110,13 @@ mkdir store
 curl -o store/README.md -l ${URL}/store/README.md
 
 printf '\n\Store \e[1;34mcreated!\e[0m' 
+
+# Linters
+curl -o .babelrc -l ${URL}/.babelrc
+curl -o .eslintrc.js -l ${URL}/.eslintrc.js
+curl -o .gitignore -l ${URL}/.gitignore
+curl -o .prettierrc -l ${URL}/.prettierrc
+curl -o nuxt.config.js -l ${URL}/nuxt.config.js
+curl -o README.md -l ${URL}/README.md
+
+printf '\n\Config files \e[1;34mcreated!\e[0m' 
