@@ -1,26 +1,25 @@
 #!/usr/bin/env bash
 URL="https://raw.githubusercontent.com/henris-style/henris-app-files/master"
+TARGET="$@/"
 
 
-printf '\n\e[1;34mSetup Nuxt Files\e[0m' 
+printf '\n\t\e[1;34mSetup Nuxt Files\e[0m' 
 
 # Assets
-mkdir assets 
-mkdir assets/fonts
+mkdir -p ${TARGET}assets/fonts
 
-curl -o assets/fonts/README.md -l ${URL}/assets/fonts/README.md --silent
+curl -o ${TARGET}assets/fonts/README.md -l ${URL}/assets/fonts/README.md --silent
 
 printf '\n\tAssets \e[1;34mcreated!\e[0m' 
 
 # Components
-mkdir components 
-mkdir components/layout
+mkdir -p ${TARGET}components/layout
 
-curl -o components/intro.vue -l ${URL}/components/intro.vue --silent
-curl -o components/layout/header.vue -l ${URL}/components/layout/header.vue --silent
-curl -o components/layout/footer.vue -l ${URL}/components/layout/footer.vue --silent
-curl -o components/layout/navigation.vue -l ${URL}/components/layout/navigation.vue --silent
-curl -o components/README.md -l ${URL}/components/README.md --silent
+curl -o ${TARGET}components/intro.vue -l ${URL}/components/intro.vue --silent
+curl -o ${TARGET}components/layout/header.vue -l ${URL}/components/layout/header.vue --silent
+curl -o ${TARGET}components/layout/footer.vue -l ${URL}/components/layout/footer.vue --silent
+curl -o ${TARGET}components/layout/navigation.vue -l ${URL}/components/layout/navigation.vue --silent
+curl -o ${TARGET}components/README.md -l ${URL}/components/README.md --silent
 
 printf '\n\tScripts \e[1;34mcreated!\e[0m' 
 
@@ -28,95 +27,93 @@ printf '\n\tScripts \e[1;34mcreated!\e[0m'
 # Config
 mkdir config 
 
-curl -o config/dev.sh -l ${URL}/config/dev.sh
-curl -o config/local.sh -l ${URL}/config/local.sh
-curl -o config/production.sh -l ${URL}/config/production.sh
-curl -o config/staging.sh -l ${URL}/config/staging.sh
-curl -o config/README.md -l ${URL}/config/README.md
+curl -o ${TARGET}config/dev.sh -l ${URL}/config/dev.sh --silent
+curl -o ${TARGET}config/local.sh -l ${URL}/config/local.sh --silent
+curl -o ${TARGET}config/production.sh -l ${URL}/config/production.sh --silent
+curl -o ${TARGET}config/staging.sh -l ${URL}/config/staging.sh --silent
+curl -o ${TARGET}config/README.md -l ${URL}/config/README.md --silent
 
 printf '\n\tConfig \e[1;34mcreated!\e[0m' 
 
 # Layouts
-mkdir layouts 
+mkdir ${TARGET}layouts 
 
-curl -o layouts/index.vue -l ${URL}/layouts/index.vue
-curl -o layouts/README.md -l ${URL}/layouts/README.md
+curl -o ${TARGET}layouts/index.vue -l ${URL}/layouts/index.vue --silent
+curl -o ${TARGET}layouts/README.md -l ${URL}/layouts/README.md --silent
 
 printf '\n\tLayouts \e[1;34mcreated!\e[0m' 
 
 # Middleware
-mkdir middleware 
+mkdir ${TARGET}middleware 
 
-curl -o middleware/README.md -l ${URL}/middleware/README.md
+curl -o ${TARGET}middleware/README.md -l ${URL}/middleware/README.md --silent
 
 printf '\n\tMiddleware \e[1;34mcreated!\e[0m' 
 
 
 # Pages
-mkdir pages 
+mkdir ${TARGET}pages 
 
-curl -o pages/index.vue -l ${URL}/pages/index.vue
-curl -o pages/README.md -l ${URL}/pages/README.md
+curl -o pages/index.vue -l ${URL}/pages/index.vue --silent
+curl -o pages/README.md -l ${URL}/pages/README.md --silent
 
 printf '\n\tPages \e[1;34mcreated!\e[0m' 
 
 # Scripts
-mkdir scripts 
+mkdir ${TARGET}scripts 
 
-curl -o scripts/dev.sh -l ${URL}/scripts/dev.sh
-curl -o scripts/local.sh -l ${URL}/scripts/local.sh
-curl -o scripts/production.sh -l ${URL}/scripts/production.sh
-curl -o scripts/staging.sh -l ${URL}/scripts/staging.sh
-curl -o scripts/README.md -l ${URL}/scripts/README.md
+curl -o scripts/dev.sh -l ${URL}/scripts/dev.sh --silent
+curl -o scripts/local.sh -l ${URL}/scripts/local.sh --silent
+curl -o scripts/production.sh -l ${URL}/scripts/production.sh --silent
+curl -o scripts/staging.sh -l ${URL}/scripts/staging.sh --silent
+curl -o scripts/README.md -l ${URL}/scripts/README.md --silent
 
 printf '\n\Scripts \e[1;34mcreated!\e[0m' 
 
 
 # Static
-mkdir static 
-mkdir static/images
+mkdir -p ${TARGET}static/images
 
-curl -o static/README.md -l ${URL}/static/README.md
-curl -o static/favicon.ico -l ${URL}/static/favicon.ico
-curl -o static/icon.png -l ${URL}/static/icon.png
-curl -o static/images/README.md -l ${URL}/static/images/README.md
+curl -o ${TARGET}static/README.md -l ${URL}/static/README.md --silent
+curl -o ${TARGET}static/favicon.ico -l ${URL}/static/favicon.ico --silent
+curl -o ${TARGET}static/icon.png -l ${URL}/static/icon.png --silent
+curl -o ${TARGET}static/images/README.md -l ${URL}/static/images/README.md --silent
 
 printf '\n\tStatic \e[1;34mcreated!\e[0m' 
 
 
 # Static
-mkdir plugins 
+mkdir ${TARGET}plugins 
 
-curl -o plugins/README.md -l ${URL}/plugins/README.md
+curl -o ${TARGET}plugins/README.md -l ${URL}/plugins/README.md --silent
 
 printf '\n\tPlugins \e[1;34mcreated!\e[0m' 
 
 
 # Static
-mkdir static 
-mkdir static/images
+mkdir -p ${TARGET}static/images
 
-curl -o static/README.md -l ${URL}/static/README.md
-curl -o static/favicon.ico -l ${URL}/static/favicon.ico
-curl -o static/icon.png -l ${URL}/static/icon.png
-curl -o static/images/README.md -l ${URL}/static/images/README.md
+curl -o ${TARGET}static/README.md -l ${URL}/static/README.md --silent
+curl -o ${TARGET}static/favicon.ico -l ${URL}/static/favicon.ico --silent
+curl -o ${TARGET}static/icon.png -l ${URL}/static/icon.png --silent
+curl -o ${TARGET}static/images/README.md -l ${URL}/static/images/README.md --silent
 
 printf '\n\tStatic \e[1;34mcreated!\e[0m' 
 
 
 # Store
-mkdir store 
+mkdir ${TARGET}store 
 
-curl -o store/README.md -l ${URL}/store/README.md
+curl -o ${TARGET}store/README.md -l ${URL}/store/README.md --silent
 
 printf '\n\tStore \e[1;34mcreated!\e[0m' 
 
 # Linters
-curl -o .babelrc -l ${URL}/.babelrc
-curl -o .eslintrc.js -l ${URL}/.eslintrc.js
-curl -o .gitignore -l ${URL}/.gitignore
-curl -o .prettierrc -l ${URL}/.prettierrc
-curl -o nuxt.config.js -l ${URL}/nuxt.config.js
-curl -o README.md -l ${URL}/README.md
+curl -o ${TARGET}.babelrc -l ${URL}/.babelrc --silent
+curl -o ${TARGET}.eslintrc.js -l ${URL}/.eslintrc.js --silent
+curl -o ${TARGET}.gitignore -l ${URL}/.gitignore --silent
+curl -o ${TARGET}.prettierrc -l ${URL}/.prettierrc --silent
+curl -o ${TARGET}nuxt.config.js -l ${URL}/nuxt.config.js --silent
+curl -o ${TARGET}README.md -l ${URL}/README.md --silent
 
 printf '\n\tConfig files \e[1;34mcreated!\e[0m' 
