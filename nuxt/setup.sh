@@ -21,7 +21,7 @@ curl -o ${TARGET}components/layout/footer.vue -l ${URL}/components/layout/footer
 curl -o ${TARGET}components/layout/navigation.vue -l ${URL}/components/layout/navigation.vue --silent
 curl -o ${TARGET}components/README.md -l ${URL}/components/README.md --silent
 
-printf '\n  Scripts \e[1;34mcreated!\e[0m' 
+printf '\n  Components \e[1;34mcreated!\e[0m' 
 
 
 # Config
