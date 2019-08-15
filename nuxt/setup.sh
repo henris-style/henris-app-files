@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-URL="https://raw.githubusercontent.com/henris-style/henris-app-files/master"
+URL="https://raw.githubusercontent.com/henris-style/henris-app-files/master/nuxt"
 TARGET="$@/"
 
 
