@@ -25,7 +25,7 @@ printf '\n  Components \e[1;34mcreated!\e[0m'
 
 
 # Config
-mkdir config 
+mkdir ${TARGET}config 
 
 curl -o ${TARGET}config/dev.sh -l ${URL}/config/dev.sh --silent
 curl -o ${TARGET}config/local.sh -l ${URL}/config/local.sh --silent
