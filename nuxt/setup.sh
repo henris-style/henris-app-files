@@ -27,10 +27,10 @@ printf '\n  Components \e[1;34mcreated!\e[0m'
 # Config
 mkdir ${TARGET}config 
 
-curl -o ${TARGET}config/dev.sh -l ${URL}/config/dev.sh --fail --silent --show-error
-curl -o ${TARGET}config/local.sh -l ${URL}/config/local.sh --fail --silent --show-error
-curl -o ${TARGET}config/production.sh -l ${URL}/config/production.sh --fail --silent --show-error
-curl -o ${TARGET}config/staging.sh -l ${URL}/config/staging.sh --fail --silent --show-error
+curl -o ${TARGET}config/dev.js -l ${URL}/config/dev.js --fail --silent --show-error
+curl -o ${TARGET}config/local.js -l ${URL}/config/local.js --fail --silent --show-error
+curl -o ${TARGET}config/production.js -l ${URL}/config/production.js --fail --silent --show-error
+curl -o ${TARGET}config/staging.js -l ${URL}/config/staging.js --fail --silent --show-error
 curl -o ${TARGET}config/README.md -l ${URL}/config/README.md --fail --silent --show-error
 
 printf '\n  Config \e[1;34mcreated!\e[0m' 
