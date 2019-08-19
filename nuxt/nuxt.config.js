@@ -43,6 +43,9 @@ module.exports = {
 	plugins: [
 		{
 			src: '~/plugins/global.components.js'
+		},
+		{
+			src: '~/plugins/global.mixins.js'
 		}
 	],
 
