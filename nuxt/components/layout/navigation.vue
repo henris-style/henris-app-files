@@ -1,10 +1,10 @@
 <template>
 	<nav class="navigation">
 		<ul class="navigation__list">
-			<li class="navigation__item" v-for="(item, idx) in navigation" :key="idx">
-				<nuxt-link class="navigation__link" :to="item.url">
+			<li v-for="(item, idx) in nav" :key="idx" class="navigation__item">
+				<nuxt-link class="navigation__link" :to="item.path">
 					<span class="navigation__text">
-						{{ item.title }}
+						{{ item.name }}
 					</span>
 				</nuxt-link>
 			</li>
@@ -14,17 +14,32 @@
 
 <script>
 export default {
-	data: () => {
-		navigation: [
-			{
-				title: 'Home',
-				url: '/'
-			}
-		];
+	computed: {
+		nav() {
+			return this.$router.options.routes.map((route) => {
+				return {
+					name: route.name,
+					path: route.path
+				};
+			});
+		}
 	}
 };
 </script>
 
 <style lang="scss">
 @import '~tools';
+.navigation {
+	&__list {
+		display: flex;
+	}
+	&__link {
+		display: block;
+		padding: 1rem;
+	}
+	&__text {
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+}
 </style>
