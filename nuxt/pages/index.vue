@@ -1,5 +1,5 @@
 <template>
-	<main class="page">
+	<main class="page page--home">
 		<HenrisIntro></HenrisIntro>
 	</main>
 </template>
@@ -14,4 +14,12 @@ export default {
 
 <style lang="scss">
 @import '~tools';
+.page {
+	&--home {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
 </style>
