@@ -85,6 +85,7 @@ printf '\n  Static \e[1;34mcreated!\e[0m'
 # Plugins
 mkdir ${TARGET}plugins 
 
+curl -o ${TARGET}plugins/global.mixins.js -l ${URL}/plugins/global.mixins.js --fail --silent --show-error
 curl -o ${TARGET}plugins/global.components.js -l ${URL}/plugins/global.components.js --fail --silent --show-error
 curl -o ${TARGET}plugins/README.md -l ${URL}/plugins/README.md --fail --silent --show-error
 
