@@ -36,10 +36,15 @@ export default {
 	&__link {
 		display: block;
 		padding: 1rem;
+		color: currentColor;
+		&.active {
+			color: color(Blue);
+		}
 	}
 	&__text {
 		font-size: 1rem;
 		line-height: 1.5;
+		color: currentColor;
 	}
 }
 </style>
