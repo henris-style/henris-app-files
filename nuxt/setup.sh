@@ -38,7 +38,7 @@ printf '\n  Config \e[1;34mcreated!\e[0m'
 # Layouts
 mkdir ${TARGET}layouts 
 
-curl -o ${TARGET}layouts/index.vue -l ${URL}/layouts/index.vue --fail --silent --show-error
+curl -o ${TARGET}layouts/default.vue -l ${URL}/layouts/default.vue --fail --silent --show-error
 curl -o ${TARGET}layouts/README.md -l ${URL}/layouts/README.md --fail --silent --show-error
 
 printf '\n  Layouts \e[1;34mcreated!\e[0m' 
