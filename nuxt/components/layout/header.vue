@@ -1,6 +1,10 @@
 <template>
 	<header id="header" class="header">
-		<h3>{{ projectName }}</h3>
+		<h3 class="header__logo">
+			<nuxt-link to="/">
+				{{ projectName }}
+			</nuxt-link>
+		</h3>
 		<LayoutNavigation></LayoutNavigation>
 	</header>
 </template>
@@ -24,12 +28,21 @@ export default {
 @import '~tools';
 
 .header {
-	// Header styles
 	position: fixed;
 	top: 0;
 	left: 0;
-
+	display: flex;
+	justify-content: space-between;
 	width: 100%;
 	text-align: center;
+	padding: grid(1 2);
+	&__logo {
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+		padding: 1rem 0;
+		a {
+			text-decoration: none;
+		}
+	}
 }
 </style>
