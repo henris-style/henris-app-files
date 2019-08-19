@@ -82,24 +82,13 @@ curl -o ${TARGET}static/images/README.md -l ${URL}/static/images/README.md --sil
 printf '\n  Static \e[1;34mcreated!\e[0m' 
 
 
-# Static
+# Plugins
 mkdir ${TARGET}plugins 
 
+curl -o ${TARGET}plugins/global.components.js -l ${URL}/plugins/global.components.js --fail --silent --show-error
 curl -o ${TARGET}plugins/README.md -l ${URL}/plugins/README.md --fail --silent --show-error
 
 printf '\n  Plugins \e[1;34mcreated!\e[0m' 
-
-
-# Static
-mkdir -p ${TARGET}static/images
-
-curl -o ${TARGET}static/README.md -l ${URL}/static/README.md --fail --silent --show-error
-curl -o ${TARGET}static/favicon.ico -l ${URL}/static/favicon.ico --fail --silent --show-error
-curl -o ${TARGET}static/icon.png -l ${URL}/static/icon.png --fail --silent --show-error
-curl -o ${TARGET}static/images/README.md -l ${URL}/static/images/README.md --fail --silent --show-error
-
-printf '\n  Static \e[1;34mcreated!\e[0m' 
-
 
 # Store
 mkdir ${TARGET}store 
