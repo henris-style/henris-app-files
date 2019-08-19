@@ -54,19 +54,19 @@ printf '\n  Middleware \e[1;34mcreated!\e[0m'
 # Pages
 mkdir ${TARGET}pages 
 
-curl -o pages/index.vue -l ${URL}/pages/index.vue --fail --silent --show-error
-curl -o pages/README.md -l ${URL}/pages/README.md --fail --silent --show-error
+curl -o ${TARGET}pages/index.vue -l ${URL}/pages/index.vue --fail --silent --show-error
+curl -o ${TARGET}pages/README.md -l ${URL}/pages/README.md --fail --silent --show-error
 
 printf '\n  Pages \e[1;34mcreated!\e[0m' 
 
 # Scripts
 mkdir ${TARGET}scripts 
 
-curl -o scripts/dev.sh -l ${URL}/scripts/dev.sh --fail --silent --show-error
-curl -o scripts/local.sh -l ${URL}/scripts/local.sh --fail --silent --show-error
-curl -o scripts/production.sh -l ${URL}/scripts/production.sh --fail --silent --show-error
-curl -o scripts/staging.sh -l ${URL}/scripts/staging.sh --fail --silent --show-error
-curl -o scripts/README.md -l ${URL}/scripts/README.md --fail --silent --show-error
+curl -o ${TARGET}scripts/dev.sh -l ${URL}/scripts/dev.sh --fail --silent --show-error
+curl -o ${TARGET}scripts/local.sh -l ${URL}/scripts/local.sh --fail --silent --show-error
+curl -o ${TARGET}scripts/production.sh -l ${URL}/scripts/production.sh --fail --silent --show-error
+curl -o ${TARGET}scripts/staging.sh -l ${URL}/scripts/staging.sh --fail --silent --show-error
+curl -o ${TARGET}scripts/README.md -l ${URL}/scripts/README.md --fail --silent --show-error
 
 printf '\n  Scripts \e[1;34mcreated!\e[0m' 
 
