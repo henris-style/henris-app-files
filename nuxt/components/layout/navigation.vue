@@ -15,8 +15,10 @@
 <script>
 export default {
 	computed: {
-		nav() {
-			return this.$router.options.routes.map((route) => {
+	nav() {
+		return this.$router.options.routes
+			.filter((route) => route.path.indexOf(':') < 0)
+			.map((route) => {
 				return {
 					name: route.name,
 					path: route.path
