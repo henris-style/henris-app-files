@@ -2,7 +2,7 @@
 	<nav class="navigation">
 		<ul class="navigation__list">
 			<li v-for="(item, idx) in nav" :key="idx" class="navigation__item">
-				<NuxtLink class="navigation__link" :to="item.path" :aria-label="`Go to ${subitem.name}`">
+				<NuxtLink class="navigation__link" :to="item.path" :aria-label="`Go to ${item.name}`">
 					<span class="navigation__text">
 						{{ item.name }}
 					</span>
