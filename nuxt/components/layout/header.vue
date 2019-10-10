@@ -1,9 +1,9 @@
 <template>
 	<header id="header" class="header">
 		<h3 class="header__logo">
-			<nuxt-link to="/">
+			<NuxtLink to="/">
 				{{ projectName }}
-			</nuxt-link>
+			</NuxtLink>
 		</h3>
 		<LayoutNavigation></LayoutNavigation>
 	</header>
@@ -16,11 +16,9 @@ export default {
 	components: {
 		LayoutNavigation
 	},
-	data() {
-		return {
-			projectName: project.name
-		};
-	}
+	data: () => ({
+		projectName: project.name
+	})
 };
 </script>
 
