@@ -23,6 +23,11 @@
 
 <script>
 export default {
+	watch: {
+		'$route': function(){
+			this.$store.dispatch('ui/setMenuActive',false);
+		}
+	},
 	computed: {
 		nav() {
 			return this.$router.options.routes
@@ -69,6 +74,9 @@ export default {
 		display: flex;
 		@media #{$medium-down} {
 			flex-direction: column;
+			transform: translateY(100%);
+			opacity: 0;
+			transition: transform $base-transition $base-cubic-bezier, opacity $base-transition $base-cubic-bezier;
 		}
 	}
 	&__link {
@@ -90,6 +98,7 @@ export default {
 	}
 	@media #{$medium-down} {
 		position: fixed;
+		z-index: 2;
 		top: 0;
 		right: 0;
 		bottom: 0;
@@ -101,7 +110,12 @@ export default {
 		transform: translateY(-100%);
 		&--active {
 			transform: translateY(0%);
+			.navigation__list{
+				transform: translateY(0%);
+				opacity: 1;
+			}
 		}
 	}
 }
 </style>
+
