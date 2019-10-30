@@ -14,11 +14,13 @@ printf '\n  Assets \e[1;34mcreated!\e[0m'
 
 # Components
 mkdir -p ${TARGET}components/layout
+mkdir -p ${TARGET}components/navigation
 
 curl -o ${TARGET}components/intro.vue -l ${URL}/components/intro.vue --fail --silent --show-error
 curl -o ${TARGET}components/layout/header.vue -l ${URL}/components/layout/header.vue --fail --silent --show-error
 curl -o ${TARGET}components/layout/footer.vue -l ${URL}/components/layout/footer.vue --fail --silent --show-error
-curl -o ${TARGET}components/layout/navigation.vue -l ${URL}/components/layout/navigation.vue --fail --silent --show-error
+curl -o ${TARGET}components/navigation/menu.vue -l ${URL}/components/navigation/menu.vue --fail --silent --show-error
+curl -o ${TARGET}components/navigation/trigger.vue -l ${URL}/components/navigation/trigger.vue --fail --silent --show-error
 curl -o ${TARGET}components/README.md -l ${URL}/components/README.md --fail --silent --show-error
 
 printf '\n  Components \e[1;34mcreated!\e[0m' 
@@ -95,6 +97,7 @@ printf '\n  Plugins \e[1;34mcreated!\e[0m'
 mkdir ${TARGET}store 
 
 curl -o ${TARGET}store/README.md -l ${URL}/store/README.md --fail --silent --show-error
+curl -o ${TARGET}store/ui.js -l ${URL}/store/ui.js --fail --silent --show-error
 
 printf '\n  Store \e[1;34mcreated!\e[0m' 
 
