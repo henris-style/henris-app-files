@@ -36,7 +36,11 @@ export default {
 						path: route.path,
 						children: this.$router.options.routes
 							.filter((route) => route.path.indexOf(':') < 0)
-							.filter((subroute) => subroute.path.indexOf(route.name) > 0 && subroute.path !== route.path)
+							.filter(
+								(subroute) =>
+									subroute.path.indexOf(route.name) > 0 &&
+									subroute.path !== route.path
+							)
 							.map((subroute) => {
 								return {
 									name: subroute.name.substr(route.name.length + 1),
@@ -63,23 +67,41 @@ export default {
 .navigation {
 	&__list {
 		display: flex;
+		@media #{$medium-down} {
+			flex-direction: column;
+		}
 	}
 	&__link {
 		display: block;
+		color: currentColor;
 		font-size: 1.5rem;
 		line-height: 1.5rem;
-		padding: 1rem 1rem;
-		color: currentColor;
 		text-decoration: none;
+		padding: 1rem 1rem;
 		&.active {
 			text-decoration: underline;
 		}
 	}
 	&__text {
-		text-decoration: none;
+		color: currentColor;
 		font-size: 1.25rem;
 		line-height: 1.5;
-		color: currentColor;
+		text-decoration: none;
+	}
+	@media #{$medium-down} {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: white;
+		transform: translateY(-100%);
+		&--active {
+			transform: translateY(0%);
+		}
 	}
 }
 </style>
