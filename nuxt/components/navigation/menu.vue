@@ -104,8 +104,10 @@ export default {
 		align-items: center;
 		background-color: white;
 		transform: translateY(-100%);
+		transition: transform 0s $base-transition;
 		&--active {
 			transform: translateY(0%);
+			transition: transform 0s;
 			.navigation__list {
 				transform: translateY(0%);
 				opacity: 1;
