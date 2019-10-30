@@ -12,8 +12,8 @@
 
 <script>
 import project from '~/package.json';
-import NavigationMenu from '~/components/layout/navigation/menu.vue';
-import NavigationTrigger from '~/components/layout/navigation/trigger.vue';
+import NavigationMenu from '~/components/navigation/menu.vue';
+import NavigationTrigger from '~/components/navigation/trigger.vue';
 export default {
 	components: {
 		NavigationMenu,
