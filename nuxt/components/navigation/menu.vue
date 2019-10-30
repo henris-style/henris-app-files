@@ -94,7 +94,7 @@ export default {
 	}
 	@media #{$medium-down} {
 		position: fixed;
-		z-index: 2;
+		z-index: 1;
 		top: 0;
 		right: 0;
 		bottom: 0;
