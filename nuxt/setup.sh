@@ -57,6 +57,7 @@ printf '\n  Middleware \e[1;34mcreated!\e[0m'
 mkdir ${TARGET}pages 
 
 curl -o ${TARGET}pages/index.vue -l ${URL}/pages/index.vue --fail --silent --show-error
+curl -o ${TARGET}pages/about.vue -l ${URL}/pages/about.vue --fail --silent --show-error
 curl -o ${TARGET}pages/README.md -l ${URL}/pages/README.md --fail --silent --show-error
 
 printf '\n  Pages \e[1;34mcreated!\e[0m' 
