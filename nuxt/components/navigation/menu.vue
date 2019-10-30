@@ -1,5 +1,5 @@
 <template>
-	<nav class="navigation" :class="{'navigation--active' : menuActive }">
+	<nav class="navigation" :class="{ 'navigation--active': menuActive }">
 		<ul class="navigation__list">
 			<li v-for="(item, idx) in nav" :key="idx" class="navigation__item">
 				<NuxtLink class="navigation__link" :to="item.path" :aria-label="`Go to ${item.name}`">
@@ -36,11 +36,7 @@ export default {
 						path: route.path,
 						children: this.$router.options.routes
 							.filter((route) => route.path.indexOf(':') < 0)
-							.filter(
-								(subroute) =>
-									subroute.path.indexOf(route.name) > 0 &&
-									subroute.path !== route.path
-							)
+							.filter((subroute) => subroute.path.indexOf(route.name) > 0 && subroute.path !== route.path)
 							.map((subroute) => {
 								return {
 									name: subroute.name.substr(route.name.length + 1),
@@ -76,7 +72,7 @@ export default {
 		color: currentColor;
 		text-decoration: none;
 		&.active {
-		      text-decoration: underline;
+			text-decoration: underline;
 		}
 	}
 	&__text {
