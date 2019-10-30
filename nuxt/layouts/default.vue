@@ -1,5 +1,5 @@
 <template>
-	<div class="layout layout-default">
+	<div class="layout layout-default" :class="colorMode">
 		<LayoutHeader />
 		<nuxt />
 		<LayoutFooter />
@@ -14,6 +14,11 @@ export default {
 	components: {
 		LayoutHeader,
 		LayoutFooter
+	},
+	computed: {
+		colorMode() {
+			return this.$store.state.ui.colorMode;
+		}
 	}
 };
 </script>
