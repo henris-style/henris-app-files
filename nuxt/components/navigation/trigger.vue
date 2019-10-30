@@ -1,7 +1,11 @@
 <template>
-    <button @click="menuActive = !menuActive" class="navigation-trigger" :class="{'navigation-trigger--active': menuActive}">
-        <span></span>
-    </button>
+	<button
+		class="navigation-trigger"
+		:class="{ 'navigation-trigger--active': menuActive }"
+		@click="menuActive = !menuActive"
+	>
+		<span></span>
+	</button>
 </template>
 
 <script>
