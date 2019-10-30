@@ -38,6 +38,9 @@ export default {
 	width: 100%;
 	text-align: center;
 	padding: grid(1 2);
+	@include min-(1, $mobile-padding) {
+		padding: 0 0 0 $mobile-padding;
+	}
 	&__logo {
 		z-index: 2;
 		font-size: 1.5rem;
