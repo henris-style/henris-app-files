@@ -5,16 +5,19 @@
 				{{ projectName }}
 			</NuxtLink>
 		</h3>
-		<LayoutNavigation></LayoutNavigation>
+		<NavigationTrigger></NavigationTrigger>
+		<NavigationMenu></NavigationMenu>
 	</header>
 </template>
 
 <script>
 import project from '~/package.json';
-import LayoutNavigation from '~/components/layout/navigation.vue';
+import NavigationMenu from '~/components/layout/navigation/menu.vue';
+import NavigationTrigger from '~/components/layout/navigation/trigger.vue';
 export default {
 	components: {
-		LayoutNavigation
+		NavigationMenu,
+		NavigationTrigger
 	},
 	data: () => ({
 		projectName: project.name
