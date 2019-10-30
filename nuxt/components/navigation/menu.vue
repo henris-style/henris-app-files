@@ -23,11 +23,6 @@
 
 <script>
 export default {
-	watch: {
-		'$route': function(){
-			this.$store.dispatch('ui/setMenuActive',false);
-		}
-	},
 	computed: {
 		nav() {
 			return this.$router.options.routes
@@ -41,11 +36,7 @@ export default {
 						path: route.path,
 						children: this.$router.options.routes
 							.filter((route) => route.path.indexOf(':') < 0)
-							.filter(
-								(subroute) =>
-									subroute.path.indexOf(route.name) > 0 &&
-									subroute.path !== route.path
-							)
+							.filter((subroute) => subroute.path.indexOf(route.name) > 0 && subroute.path !== route.path)
 							.map((subroute) => {
 								return {
 									name: subroute.name.substr(route.name.length + 1),
@@ -62,6 +53,11 @@ export default {
 			set(value) {
 				this.$store.dispatch('ui/setMenuActive', value);
 			}
+		}
+	},
+	watch: {
+		$route: function() {
+			this.$store.dispatch('ui/setMenuActive', false);
 		}
 	}
 };
@@ -110,7 +106,7 @@ export default {
 		transform: translateY(-100%);
 		&--active {
 			transform: translateY(0%);
-			.navigation__list{
+			.navigation__list {
 				transform: translateY(0%);
 				opacity: 1;
 			}
@@ -118,4 +114,3 @@ export default {
 	}
 }
 </style>
-
