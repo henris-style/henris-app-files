@@ -52,7 +52,7 @@ export default {
 		},
 		menuActive: {
 			get() {
-				return this.$store.ui.state.menu.active;
+				return this.$store.state.ui.menu.active;
 			},
 			set(value) {
 				this.$store.dispatch('ui/setMenuActive', value);
@@ -76,7 +76,7 @@ export default {
 		color: currentColor;
 		text-decoration: none;
 		&.active {
-      text-decoration: underline;
+		      text-decoration: underline;
 		}
 	}
 	&__text {
