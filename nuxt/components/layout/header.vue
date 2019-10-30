@@ -30,6 +30,7 @@ export default {
 
 .header {
 	position: fixed;
+	z-index: 1;
 	top: 0;
 	left: 0;
 	display: flex;
@@ -38,6 +39,7 @@ export default {
 	text-align: center;
 	padding: grid(1 2);
 	&__logo {
+		z-index: 2;
 		font-size: 1.5rem;
 		line-height: 1.5rem;
 		padding: 1rem 0;
