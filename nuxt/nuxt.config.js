@@ -11,6 +11,9 @@ module.exports = {
 		environment: config.env || 'production'
 	},
 
+	/*
+	 ** Classes for router-links.
+	 */
 	router: {
 		linkPrefetchedClass: 'prefetched',
 		linkExactActiveClass: 'active--exact',
@@ -67,7 +70,7 @@ module.exports = {
 				}
 			}
 		],
-		'@nuxtjs/google-analytics',
+// 		'@nuxtjs/google-analytics',
 		'@nuxtjs/axios',
 		'@nuxtjs/pwa'
 	],
@@ -75,10 +78,10 @@ module.exports = {
 	/*
 	 ** GoogleAnalytics module configuration
 	 */
-	'google-analytics': {
-		id: 'UA-142191977-1',
-		disabled: false
-	},
+// 	'google-analytics': {
+// 		id: 'UA-XXXXXXXXX-XX',
+// 		disabled: false
+// 	},
 
 	/*
 	 ** Axios module configuration
