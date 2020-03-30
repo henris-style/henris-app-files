@@ -10,11 +10,13 @@
 	</header>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import project from '~/package.json';
 import NavigationMenu from '~/components/navigation/menu.vue';
 import NavigationTrigger from '~/components/navigation/trigger.vue';
-export default {
+
+export default Vue.extend({
 	components: {
 		NavigationMenu,
 		NavigationTrigger
@@ -22,7 +24,7 @@ export default {
 	data: () => ({
 		projectName: project.name
 	})
-};
+});
 </script>
 
 <style lang="scss">
