@@ -56,8 +56,8 @@ module.exports = {
 	 */
 	buildModules: [
 		'@nuxt/typescript-build',
-	    	// Doc: https://github.com/nuxt-community/stylelint-module
-	    	'@nuxtjs/stylelint-module'
+		// Doc: https://github.com/nuxt-community/stylelint-module
+		'@nuxtjs/stylelint-module'
 	],
 
 	/*
@@ -78,7 +78,7 @@ module.exports = {
 				}
 			}
 		],
-// 		'@nuxtjs/google-analytics',
+		// 		'@nuxtjs/google-analytics',
 		'@nuxtjs/axios',
 		'@nuxtjs/pwa'
 	],
@@ -86,10 +86,10 @@ module.exports = {
 	/*
 	 ** GoogleAnalytics module configuration
 	 */
-// 	'google-analytics': {
-// 		id: 'UA-XXXXXXXXX-XX',
-// 		disabled: false
-// 	},
+	// 	'google-analytics': {
+	// 		id: 'UA-XXXXXXXXX-XX',
+	// 		disabled: false
+	// 	},
 
 	/*
 	 ** Axios module configuration
