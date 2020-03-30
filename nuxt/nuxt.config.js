@@ -102,7 +102,7 @@ export default {
 	 */
 	css: [
 		{
-			src: '~assets/scss/app.scss',
+			src: '@/assets/scss/app.scss',
 			lang: 'scss'
 		}
 	]
