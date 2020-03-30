@@ -51,6 +51,14 @@ module.exports = {
 			src: '~/plugins/global.mixins.js'
 		}
 	],
+	/*
+	 ** Nuxt.js dev-modules
+	 */
+	buildModules: [
+		'@nuxt/typescript-build',
+	    	// Doc: https://github.com/nuxt-community/stylelint-module
+	    	'@nuxtjs/stylelint-module'
+	],
 
 	/*
 	 ** Nuxt.js modules
@@ -98,18 +106,6 @@ module.exports = {
 	 */
 	build: {
 		/*
-		 ** Build plugins
-		 */
-		plugins: [],
-
-		// babel: {
-		// 	babelrc: true,
-		// 	cacheDirectory: undefined
-		// },
-
-		transpile: [], // Name of NPM packages to be transpiled
-
-		/*
 		 ** You can extend webpack config here
 		 */
 		extend(config, ctx) {
@@ -126,7 +122,6 @@ module.exports = {
 			}
 		}
 	},
-
 	/*
 	 ** Global CSS
 	 */
