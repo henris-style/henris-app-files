@@ -9,9 +9,10 @@
 
 .logo {
 	position: relative;
-	background-color: color(Blue);
 	width: grid(10);
 	height: grid(10);
+	background-color: color(Blue);
+	clip-path: inset(100% 0 0 0);
 	animation: comeIn $base-transition $base-cubic-bezier forwards;
 	@at-root {
 		@keyframes comeIn {
@@ -20,15 +21,15 @@
 			}
 		}
 	}
-	clip-path: inset(100% 0 0 0);
 	h1 {
-		color: color(White);
 		position: absolute;
-		left: 40%;
 		bottom: 0;
-		transform: translateY(100%);
+		left: 40%;
+		color: color(White);
 		font-size: grid(6);
-		animation: comeUp $base-transition $base-transition $base-cubic-bezier forwards;
+		transform: translateY(100%);
+		animation: comeUp $base-transition $base-transition $base-cubic-bezier
+			forwards;
 		@at-root {
 			@keyframes comeUp {
 				to {
