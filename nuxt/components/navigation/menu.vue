@@ -2,14 +2,26 @@
 	<nav class="navigation" :class="{ 'navigation--active': menuActive }">
 		<ul class="navigation__list">
 			<li v-for="(item, idx) in nav" :key="idx" class="navigation__item">
-				<NuxtLink class="navigation__link" :to="item.path" :aria-label="`Go to ${item.name}`">
+				<NuxtLink
+					class="navigation__link"
+					:to="item.path"
+					:aria-label="`Go to ${item.name}`"
+				>
 					<span class="navigation__text">
 						{{ item.name }}
 					</span>
 				</NuxtLink>
 				<ul v-if="item.children.length > 0" class="navigation__sublist">
-					<li v-for="(subitem, idy) in item.children" :key="idy" class="navigation__item navigation__subitem">
-						<NuxtLink class="navigation__link navigation__sublink" :to="subitem.path" :aria-label="`Go to ${subitem.name}`">
+					<li
+						v-for="(subitem, idy) in item.children"
+						:key="idy"
+						class="navigation__item navigation__subitem"
+					>
+						<NuxtLink
+							class="navigation__link navigation__sublink"
+							:to="subitem.path"
+							:aria-label="`Go to ${subitem.name}`"
+						>
 							<span class="navigation__text navigation__subtext">
 								{{ subitem.name }}
 							</span>
@@ -26,17 +38,21 @@ export default {
 	computed: {
 		nav() {
 			return this.$router.options.routes
-				.filter((route) => route.path.indexOf(':') < 0)
-				.filter((route) => route.path.indexOf('404') < 0)
-				.filter((route) => route.path.substring(1).indexOf('/') < 0)
+				.filter((route) => !route.path.includes(':'))
+				.filter((route) => !route.path.includes('404'))
+				.filter((route) => !route.path.substring(1).includes('/'))
 				.filter((route) => route.name !== 'index')
 				.map((route) => {
 					return {
 						name: route.name,
 						path: route.path,
 						children: this.$router.options.routes
-							.filter((route) => route.path.indexOf(':') < 0)
-							.filter((subroute) => subroute.path.indexOf(route.name) > 0 && subroute.path !== route.path)
+							.filter((route) => !route.path.includes(':'))
+							.filter(
+								(subroute) =>
+									subroute.path.indexOf(route.name) > 0 &&
+									subroute.path !== route.path
+							)
 							.map((subroute) => {
 								return {
 									name: subroute.name.substr(route.name.length + 1),
@@ -56,7 +72,7 @@ export default {
 		}
 	},
 	watch: {
-		$route: function() {
+		$route() {
 			this.$store.dispatch('ui/setMenuActive', false);
 		}
 	}
@@ -72,7 +88,8 @@ export default {
 			flex-direction: column;
 			transform: translateY(100%);
 			opacity: 0;
-			transition: transform $base-transition $base-cubic-bezier, opacity $base-transition $base-cubic-bezier;
+			transition: transform $base-transition $base-cubic-bezier,
+				opacity $base-transition $base-cubic-bezier;
 		}
 	}
 	&__link {
@@ -94,11 +111,11 @@ export default {
 	}
 	@media #{$medium-down} {
 		position: fixed;
-		z-index: 1;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
+		z-index: 1;
 		display: flex;
 		justify-content: center;
 		align-items: center;
