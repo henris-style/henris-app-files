@@ -4,12 +4,15 @@
 	</main>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import HenrisIntro from '~/components/intro.vue';
 
-export default {
-	components: { HenrisIntro }
-};
+export default Vue.extend({
+	components: { 
+    HenrisIntro 
+  }
+})
 </script>
 
 <style lang="scss">
