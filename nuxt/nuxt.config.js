@@ -36,27 +36,21 @@ module.exports = {
 	 ** Customize the progress bar color
 	 */
 	loading: {
-		color: '#000000' //,
-		// failedColor: '#000000'
+		color: '#000000'
 	},
 
 	/*
 	 ** Plugins to load before mounting the App
 	 */
 	plugins: [
-		{
-			src: '~/plugins/global.components.js'
-		},
-		{
-			src: '~/plugins/global.mixins.js'
-		}
+    '~/plugins/global.components.js',
+		'~/plugins/global.mixins.js'
 	],
 	/*
 	 ** Nuxt.js dev-modules
 	 */
 	buildModules: [
 		'@nuxt/typescript-build',
-		// Doc: https://github.com/nuxt-community/stylelint-module
 		'@nuxtjs/stylelint-module'
 	],
 
@@ -64,23 +58,10 @@ module.exports = {
 	 ** Nuxt.js modules
 	 */
 	modules: [
-		[
-			'nuxt-rfg-icon',
-			{
-				rfg: {
-					design: {
-						ios: {
-							pictureAspect: 'backgroundAndMargin',
-							backgroundColor: '#000000',
-							margin: '0%'
-						}
-					}
-				}
-			}
-		],
-		// 		'@nuxtjs/google-analytics',
+		'nuxt-favicons',
 		'@nuxtjs/axios',
-		'@nuxtjs/pwa'
+		'@nuxtjs/pwa',
+		// 		'@nuxtjs/google-analytics',
 	],
 
 	/*
