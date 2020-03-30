@@ -12,9 +12,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import project from '~/package.json';
-import NavigationMenu from '~/components/navigation/menu.vue';
-import NavigationTrigger from '~/components/navigation/trigger.vue';
+import NavigationMenu from '@/components/navigation/menu.vue';
+import NavigationTrigger from '@/components/navigation/trigger.vue';
 
 export default Vue.extend({
 	components: {
@@ -22,7 +21,7 @@ export default Vue.extend({
 		NavigationTrigger
 	},
 	data: () => ({
-		projectName: project.name
+		projectName: 'Hi!'
 	})
 });
 </script>
