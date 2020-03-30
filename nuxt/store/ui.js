@@ -6,17 +6,11 @@ export const state = () => ({
 });
 
 export const mutations = {
-	setDarkMode(state) {
-		state.settings.colorMode = 'dark';
-	},
-	setLightMode(state) {
-		state.settings.colorMode = 'light';
-	},
 	setMode(state, value) {
 		state.settings.colorMode = value;
 	},
 	toggleColorMode(state) {
-		if (state.settings.colorMode == 'light') state.settings.colorMode = 'dark';
+		if (state.settings.colorMode === 'light') state.settings.colorMode = 'dark';
 		else state.settings.colorMode = 'light';
 	},
 	setMenuActive(state, value) {
@@ -26,10 +20,10 @@ export const mutations = {
 
 export const actions = {
 	setDarkMode({ commit }) {
-		commit('setDarkmode');
+		commit('setMode','dark');
 	},
 	setLightMode({ commit }) {
-		commit('setLightMode');
+		commit('setMode','light');
 	},
 	toggleColorMode({ commit }) {
 		commit('toggleColorMode');
