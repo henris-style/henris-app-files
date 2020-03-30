@@ -5,7 +5,7 @@ if (config.env === 'development') {
 	process.env.DEBUG = 'nuxt:*';
 }
 
-module.exports = {
+export default {
 	mode: 'universal',
 	env: {
 		environment: config.env || 'production'
@@ -42,17 +42,11 @@ module.exports = {
 	/*
 	 ** Plugins to load before mounting the App
 	 */
-	plugins: [
-    '~/plugins/global.components.js',
-		'~/plugins/global.mixins.js'
-	],
+	plugins: ['~/plugins/global.components.js', '~/plugins/global.mixins.js'],
 	/*
 	 ** Nuxt.js dev-modules
 	 */
-	buildModules: [
-		'@nuxt/typescript-build',
-		'@nuxtjs/stylelint-module'
-	],
+	buildModules: ['@nuxt/typescript-build', '@nuxtjs/stylelint-module'],
 
 	/*
 	 ** Nuxt.js modules
@@ -60,7 +54,7 @@ module.exports = {
 	modules: [
 		'nuxt-favicons',
 		'@nuxtjs/axios',
-		'@nuxtjs/pwa',
+		'@nuxtjs/pwa'
 		// 		'@nuxtjs/google-analytics',
 	],
 
