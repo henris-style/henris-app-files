@@ -5,13 +5,13 @@
 				{{ projectName }}
 			</NuxtLink>
 		</h3>
-		<NavigationTrigger></NavigationTrigger>
-		<NavigationMenu></NavigationMenu>
+		<NavigationTrigger />
+		<NavigationMenu />
 	</header>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
 import NavigationMenu from '@/components/navigation/menu.vue';
 import NavigationTrigger from '@/components/navigation/trigger.vue';
 
@@ -31,9 +31,9 @@ export default Vue.extend({
 
 .header {
 	position: fixed;
-	z-index: 1;
 	top: 0;
 	left: 0;
+	z-index: 1;
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
