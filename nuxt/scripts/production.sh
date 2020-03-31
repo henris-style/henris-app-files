@@ -1,5 +1,5 @@
-# copy production config to the latest.js (which is used in nuxt.config.js)
-cp ./config/production.js ./config/latest.js
+# copy production config to the current .env (which is used in nuxt.config.js)
+cp ./env/.env.prd ./.env
 
 # node env
 export NODE_ENV=production 
