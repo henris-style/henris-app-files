@@ -27,15 +27,15 @@ printf '\n  Components \e[1;34mcreated!\e[0m'
 
 
 # Config
-mkdir ${TARGET}config 
+mkdir ${TARGET}env 
 
-curl -o ${TARGET}config/dev.js -l ${URL}/config/dev.js --fail --silent --show-error
-curl -o ${TARGET}config/local.js -l ${URL}/config/local.js --fail --silent --show-error
-curl -o ${TARGET}config/production.js -l ${URL}/config/production.js --fail --silent --show-error
-curl -o ${TARGET}config/staging.js -l ${URL}/config/staging.js --fail --silent --show-error
-curl -o ${TARGET}config/README.md -l ${URL}/config/README.md --fail --silent --show-error
+curl -o ${TARGET}env/.env.dev -l ${URL}/env/.env.dev --fail --silent --show-error
+curl -o ${TARGET}env/.env.local -l ${URL}/env/.env.local --fail --silent --show-error
+curl -o ${TARGET}env/.env.prd -l ${URL}/env/.env.prd --fail --silent --show-error
+curl -o ${TARGET}env/.env.tst -l ${URL}/env/.env.tst --fail --silent --show-error
+curl -o ${TARGET}env/README.md -l ${URL}/env/README.md --fail --silent --show-error
 
-printf '\n  Config \e[1;34mcreated!\e[0m' 
+printf '\n  Environments \e[1;34mcreated!\e[0m' 
 
 # Layouts
 mkdir ${TARGET}layouts 
@@ -67,8 +67,8 @@ mkdir ${TARGET}scripts
 
 curl -o ${TARGET}scripts/dev.sh -l ${URL}/scripts/dev.sh --fail --silent --show-error
 curl -o ${TARGET}scripts/local.sh -l ${URL}/scripts/local.sh --fail --silent --show-error
-curl -o ${TARGET}scripts/production.sh -l ${URL}/scripts/production.sh --fail --silent --show-error
-curl -o ${TARGET}scripts/staging.sh -l ${URL}/scripts/staging.sh --fail --silent --show-error
+curl -o ${TARGET}scripts/prd.sh -l ${URL}/scripts/prd.sh --fail --silent --show-error
+curl -o ${TARGET}scripts/tst.sh -l ${URL}/scripts/tst.sh --fail --silent --show-error
 curl -o ${TARGET}scripts/README.md -l ${URL}/scripts/README.md --fail --silent --show-error
 
 printf '\n  Scripts \e[1;34mcreated!\e[0m' 
@@ -102,14 +102,14 @@ curl -o ${TARGET}store/ui.js -l ${URL}/store/ui.js --fail --silent --show-error
 
 printf '\n  Store \e[1;34mcreated!\e[0m' 
 
-# Linters
+# Config
 curl -o ${TARGET}.babelrc -l ${URL}/.babelrc --fail --silent --show-error
 curl -o ${TARGET}.eslintrc.js -l ${URL}/.eslintrc.js --fail --silent --show-error
 curl -o ${TARGET}.gitignore -l ${URL}/.gitignore --fail --silent --show-error
 curl -o ${TARGET}.prettierrc -l ${URL}/.prettierrc --fail --silent --show-error
 curl -o ${TARGET}nuxt.config.js -l ${URL}/nuxt.config.js --fail --silent --show-error
+curl -o ${TARGET}README.md -l ${URL}/README.md --fail --silent --show-error
 curl -o ${TARGET}stylelint.config.js -l ${URL}/stylelint.config.js --fail --silent --show-error
 curl -o ${TARGET}tsconfig.json -l ${URL}/tsconfig.json --fail --silent --show-error
-curl -o ${TARGET}README.md -l ${URL}/README.md --fail --silent --show-error
 
 printf '\n  Config files \e[1;34mcreated!\e[0m\n\n' 
