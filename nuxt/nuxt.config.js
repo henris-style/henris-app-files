@@ -1,14 +1,14 @@
 import pkg from './package';
-import config from './config/latest';
+require('dotenv').config();
 
-if (config.env === 'development') {
+if (process.env.environment === 'development') {
 	process.env.DEBUG = 'nuxt:*';
 }
 
 export default {
 	mode: 'universal',
 	env: {
-		environment: config.env || 'production'
+		environment: process.env.environment || 'production'
 	},
 
 	/*
@@ -73,7 +73,7 @@ export default {
 		retry: {
 			retries: 3
 		},
-		baseURL: config.api
+		baseURL: process.env.api
 	},
 
 	/*
