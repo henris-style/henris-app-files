@@ -20,10 +20,10 @@ export const mutations = {
 
 export const actions = {
 	setDarkMode({ commit }) {
-		commit('setMode','dark');
+		commit('setMode', 'dark');
 	},
 	setLightMode({ commit }) {
-		commit('setMode','light');
+		commit('setMode', 'light');
 	},
 	toggleColorMode({ commit }) {
 		commit('toggleColorMode');
