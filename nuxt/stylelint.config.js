@@ -20,8 +20,8 @@ module.exports = {
 			}
 		],
 		'order/order': [
-			'custom-properties',
 			'dollar-variables',
+			'custom-properties',
 			'declarations',
 			'rules'
 		],
